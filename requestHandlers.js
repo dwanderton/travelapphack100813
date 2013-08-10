@@ -1,6 +1,7 @@
 var exec = require("child_process").exec;
 var fs = require('fs');
 var request = require('request');
+var pearsonapikeyappend = "?apikey=6400efb9c1d7e64df6407a6d58bd2f00";
 
 var htmlhead = "head.html";
 var htmlfooter = "footer.html";

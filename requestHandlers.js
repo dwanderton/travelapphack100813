@@ -24,13 +24,20 @@ function london(response){
 
 function newyork(response) {
     console.log("Request handler 'newyork' was called.");
+    var categoriesUrl = "http://api.pearson.com/v2/travel/categories" + pearsonapikeyappend;
     var requrl = pearsonbegin + "tt_london/places?category=Nightlife" +pearsonapikeyappend;
-    
     var r = request(requrl, function (e, resp) {
-	assert.equal(JSON.parse(JSON.stringify(r)).response.statusCode, 200);
-	console.log(JSON.parse(JSON.stringify(r)).response.body);
+    assert.equal(JSON.parse(JSON.stringify(r)).response.statusCode, 200); 
+    console.log(JSON.parse(JSON.stringify(r)).response.body);
     });
     var body = '<html>hello</html>';
+    response.writeHead(200, {"Content-Type":"text/html"});
+    response.write(body);
+    response.end();
+
+    var body = '<html>' +
+    'hi'
+    '</html>';
     response.writeHead(200, {"Content-Type":"text/html"});
     response.write(body);
     response.end();

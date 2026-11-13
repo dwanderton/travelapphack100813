@@ -1,0 +1,3 @@
+# Historical findings baselined 2026-11-12 (reviewed; see security sweep notes).
+50c21f7f4695b6d13f54509bbaf3ca5e0772bca3:requestHandlers.js:generic-api-key:6
+9677dfe17ef6c2d7652629f1375dafd8469e0149:requestHandlers.js:generic-api-key:4
